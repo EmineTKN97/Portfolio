@@ -1,4 +1,5 @@
-﻿
+﻿namespace Portfolio.DAL.Entities
+{
 
     public class About
     {
@@ -7,4 +8,5 @@
         public string SubDescription { get; set; }
         public string Details { get; set; }
     }
+}
 

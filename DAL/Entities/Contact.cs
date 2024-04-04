@@ -1,4 +1,5 @@
-﻿
+﻿namespace Portfolio.DAL.Entities
+{
     public class Contact
     {
         public int Id { get; set; }
@@ -10,4 +11,4 @@
         public string Email2 { get; set; }
         public string Address { get; set; }
     }
-
+}
