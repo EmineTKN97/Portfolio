@@ -24,5 +24,27 @@ namespace Portfolio.Controllers
             _context.SaveChanges();
 			return RedirectToAction("ExperienceList");   
 		}
+	
+		public IActionResult DeleteExperience(int id)
+		{
+			var experience= _context.Experiences.Find(id);
+			_context.Experiences.Remove(experience);
+			_context.SaveChanges();
+			return RedirectToAction("ExperienceList");
+		}
+		[HttpGet]
+		public IActionResult UpdateExperience(int id)
+		{
+			var value = _context.Experiences.Find(id);
+			return View();
+		}
+		[HttpPut]
+		public IActionResult UpdateExperience()
+		{
+			var experience = _context.Experiences.Find();
+			_context.Experiences.Remove(experience);
+			_context.SaveChanges();
+			return RedirectToAction("ExperienceList");
+		}
 	}
 }
