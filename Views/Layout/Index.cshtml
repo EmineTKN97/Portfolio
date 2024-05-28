@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+@await Component.InvokeAsync("_LayaoutHeadComponentPartial")
+
+<body>
+	<div class="wrapper">
+		@await Component.InvokeAsync("_LayoutNavbarComponentPartial")
+		@await Component.InvokeAsync("_LayaoutSlideBarComponentPartial")
+		
+		
+			@RenderBody()
+		</div>
+	</div>
+	<!-- Modal -->
+</body>
+@await Component.InvokeAsync("_LayaoutScriptComponentPartial")
+
+</html>
