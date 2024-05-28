@@ -1,14 +1,33 @@
 ﻿<!DOCTYPE html>
 <html>
+@await RenderSectionAsync("css", required: false)
 @await Component.InvokeAsync("_LayaoutHeadComponentPartial")
 
 <body>
 	<div class="wrapper">
 		@await Component.InvokeAsync("_LayoutNavbarComponentPartial")
 		@await Component.InvokeAsync("_LayaoutSlideBarComponentPartial")
-		
-		
+
+
+		<div class="main-panel">
 			@RenderBody()
+			<footer class="footer">
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="/Home/Index">
+								Anasayfa
+								</a>
+							</li>	
+						</ul>
+					</nav>
+					<div class="copyright ml-auto">
+						@DateTime.Now.Year, made with <i class="la la-heart heart text-danger"></i> by <a href="http://www.themekita.com">ThemeKita</a>
+					</div>
+				</div>
+			</footer>
+			</div>
 		</div>
 	</div>
 	<!-- Modal -->
