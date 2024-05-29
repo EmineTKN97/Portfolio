@@ -36,13 +36,11 @@ namespace Portfolio.Controllers
 		public IActionResult UpdateExperience(int id)
 		{
 			var value = _context.Experiences.Find(id);
-			return View();
+			return View(value);
 		}
-		[HttpPut]
-		public IActionResult UpdateExperience()
+		public IActionResult UpdateExperience(Experience experience)
 		{
-			var experience = _context.Experiences.Find();
-			_context.Experiences.Remove(experience);
+			_context.Experiences.Update(experience);
 			_context.SaveChanges();
 			return RedirectToAction("ExperienceList");
 		}
