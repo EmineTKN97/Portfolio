@@ -1,0 +1,28 @@
+﻿@model Message
+@{
+    ViewData["Title"] = "ShowMessage";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Mesajlar</h4>
+		<div class="row">
+				<input type="hidden" asp-for="Id" />
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Mesaj Detayları</div>
+					</div>
+					<div class="card-body">
+						<p><b>Gönderen:</b> @Model.NameSurname.ToUpper() <br /><b>Email:</b> @Model.Email  <b><br />Tarih :</b> @Model.SendDate</p>
+					<br />
+						<p><b>Mesaj :</b>@Model.MessageDetail</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
